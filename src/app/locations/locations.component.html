@@ -10,8 +10,16 @@
             <ul>
                 <li *ngFor="let item of data" (click) ="viewDetails(item)" > 
                     <p>{{item.name}}</p>
-                        <div *ngIf="item.isOpen; else elseBlock" >open</div>
+                        <div class="status"*ngIf="item.isOpen; else elseBlock" >open</div>
                         <ng-template #elseBlock> <span class="close">close</span> </ng-template>
+
+                    <div class="mobile-view-area">
+
+                        <span>until: {{details.openUntil}}</span>
+                        <h5>call : {{details.businessPhoneNumber}}</h5>
+
+                        <h2 class="address">{{details.address.streetAddress}},{{details.address.city}}, {{details.address.country}}</h2>
+                    </div>
                 </li>
             </ul>
         </div>

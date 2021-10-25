@@ -1,35 +1,40 @@
-
-  .search-area{
-    background:#83c5be;
-    position: fixed;
-    width :40%;
-    height: 100%;
-    z-index: 1;
-    text-align: center;
+.mobile-view-area{
     
-  }
+  display: none;
+
+}
+
+.search-area{
+  background:#83c5be;
+  position: fixed;
+  width :40%;
+  height: 100%;
+  z-index: 1;
+  text-align: center;
+  
+}
 
 .search-area input{
-    margin-top: 10%;
-    position: relative;
-    height: 3em;
-    width: 60%;
-    border:1px,solid,black;
-    border-radius: 5px;
+  margin-top: 10%;
+  position: relative;
+  height: 3em;
+  width: 60%;
+  border:1px,solid,black;
+  border-radius: 5px;
 
 }
+
 .search-area h2{
-    padding:5%;
+  padding:5%;
 
 }
- hr{
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+hr{
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
 }
-
 
 .result-area {
   position: fixed;
@@ -39,7 +44,7 @@
   border-radius: 10px;
   overflow: auto;
 }
- 
+
 
 
 .result-area ul li{
@@ -51,7 +56,7 @@
   cursor:pointer;
 }
 
-.result-area ul li div{
+.status{
   color:#caffbf;
   font-size: small;
 
@@ -86,6 +91,88 @@ span.close{
   border-radius: 10px;
   height:90px;
   color:#94d2bd;
+}
+
+
+
+
+@media  (max-width:700px)  {
+
+  .search-area{
+    background-color: #83c5be;
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-area input{
+    margin-top: 10%;
+    position: relative;
+    height: 3em;
+    width: 60%;
+    border:1px,solid,black;
+    border-radius: 5px;
+
+  }
+
+  .search-area h2{
+    padding:5%;
+
+}
+
+hr{
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  
+}
+
+.result-area {
+  position: fixed;
+  padding-top: 5px;
+  width :100%;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.result-area ul li{
+  border-radius: 10px;
+  background-color: #264653;
+  padding: 5px;
+  margin: 2px;
+  color: white;
+  cursor:pointer;
+}
+
+.address{
+  margin-top: 5%;
+ background-color: #0a9396;
+ padding:10%;
+ border-radius: 10px;
+ height:90px;
+ color:#94d2bd;
+}
+
+
+
+
+
+
+
+  .view-area{
+    
+    display: none !important;
+
+  }
+
+  .mobile-view-area{
+    
+    display:inline;  
+  }
+ 
+
+  
 }
     
 
