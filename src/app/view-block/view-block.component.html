@@ -1,0 +1,19 @@
+<div class="view-area">
+    <div *ngIf=" details != ''" >
+        <h1>{{details.name}}</h1>
+        <div class = "open" *ngIf="details.isOpen; else detailsStatus" >open</div>
+        <ng-template #detailsStatus> <span class="close">close </span> </ng-template>
+        <span>until: {{details.openUntil}}</span>
+        <h5>call : {{details.businessPhoneNumber}}</h5>
+
+        <br><hr>
+        <h2 class="address">{{details.address.streetAddress}},{{details.address.city}}, {{details.address.country}}</h2>
+        <button routerLink="/{{details._id}}" (click) = "add()" > ORDER FROM HERE</button>
+        
+    
+    
+
+    </div>
+
+
+</div>

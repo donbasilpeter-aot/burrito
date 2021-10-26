@@ -1,0 +1,43 @@
+.location-details{
+    background:#83c5be;
+    position: fixed;
+    width :100%;
+    height: 90%;
+    z-index: 1;
+    text-align: center;
+    overflow: auto;
+}
+
+.heading{
+    margin: auto;
+    padding: 1em;
+}
+
+
+hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  
+  }
+table{
+    text-align: right;
+    border-radius: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    position: relative;
+    background: #0a9396;
+    text-align: center;
+    align-items: center;
+    height :auto;
+    padding: 3em;
+  
+}
+
+
+td,th{
+    text-align: left;
+    padding: 1em;
+}
