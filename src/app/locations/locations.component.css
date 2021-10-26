@@ -143,6 +143,7 @@ hr{
   margin: 2px;
   color: white;
   cursor:pointer;
+  height:auto;
 }
 
 .address{
@@ -150,7 +151,7 @@ hr{
  background-color: #0a9396;
  padding:10%;
  border-radius: 10px;
- height:90px;
+ height:auto;
  color:#94d2bd;
 }
 

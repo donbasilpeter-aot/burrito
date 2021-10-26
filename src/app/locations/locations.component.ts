@@ -30,7 +30,7 @@ export class LocationsComponent implements OnInit {
 
   viewDetails(item:any){
     this.details = item;
-    console.log(this.details)
+
     
   }
   
@@ -52,7 +52,7 @@ export class LocationsComponent implements OnInit {
               this.data.push(response[i]);
               this.id.push((response[i])._id)
      }
-
+ 
 
         }
         if(this.data.length>0){

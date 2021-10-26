@@ -1,53 +1,53 @@
 <div class="location">
 
-<div class="search-area">
-    <input type="text" #input (keyup) ="onKey(input.value)" placeholder="Search by location name or street address">
-    <h2 >Choose a location to order
-    </h2>
-    <hr>
-    <div class="result-area">
-        <div *ngIf="data.length>0; else noData" >
-            <ul>
-                <li *ngFor="let item of data" (click) ="viewDetails(item)" > 
-                    <p>{{item.name}}</p>
-                        <div class="status"*ngIf="item.isOpen; else elseBlock" >open</div>
-                        <ng-template #elseBlock> <span class="close">close</span> </ng-template>
+    <div class="search-area">
+        <input type="text" #input (keyup) ="onKey(input.value)" placeholder="Search by location name or street address">
+        <h2 >Choose a location to order
+        </h2>
+        <hr>
+        <div class="result-area">
+            <div *ngIf="data.length>0; else noData" >
+                <ul>
+                    <li *ngFor="let item of data" (click) ="viewDetails(item)" > 
+                        <p>{{item.name}}</p>
+                            <div class="status"*ngIf="item.isOpen; else elseBlock" >open</div>
+                            <ng-template #elseBlock> <span class="close">close</span> </ng-template>
 
-                    <div class="mobile-view-area">
+                        <div class="mobile-view-area">
 
-                        <span>until: {{details.openUntil}}</span>
-                        <h5>call : {{details.businessPhoneNumber}}</h5>
+                            <span>until: {{details.openUntil}}</span>
+                            <h5>call : {{details.businessPhoneNumber}}</h5>
 
-                        <h2 class="address">{{details.address.streetAddress}},{{details.address.city}}, {{details.address.country}}</h2>
-                    </div>
-                </li>
-            </ul>
+                            <h2 class="address">{{details.address.streetAddress}},{{details.address.city}}, {{details.address.country}}</h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <ng-template #noData> <span>Unable to find any locations</span> </ng-template>
         </div>
 
-        <ng-template #noData> <span>Unable to find any locations</span> </ng-template>
     </div>
 
-</div>
 
 
+    <div class="view-area">
+        <div *ngIf=" details != ''" >
+            <h1>{{details.name}}</h1>
+            <div class = "open" *ngIf="details.isOpen; else detailsStatus" >open</div>
+            <ng-template #detailsStatus> <span class="close">close </span> </ng-template>
+            <span>until: {{details.openUntil}}</span>
+            <h5>call : {{details.businessPhoneNumber}}</h5>
 
-<div class="view-area">
-    <div *ngIf=" details != ''" >
-        <h1>{{details.name}}</h1>
-        <div class = "open" *ngIf="details.isOpen; else detailsStatus" >open</div>
-        <ng-template #detailsStatus> <span class="close">close </span> </ng-template>
-        <span>until: {{details.openUntil}}</span>
-        <h5>call : {{details.businessPhoneNumber}}</h5>
-
-        <br><hr>
-        <h2 class="address">{{details.address.streetAddress}},{{details.address.city}}, {{details.address.country}}</h2>
+            <br><hr>
+            <h2 class="address">{{details.address.streetAddress}},{{details.address.city}}, {{details.address.country}}</h2>
+            
         
-      
-      
+        
+
+        </div>
+
+
 
     </div>
-
-
-
-</div>
 </div>
